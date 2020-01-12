@@ -13,7 +13,7 @@ YUM_ARGS="--setopt=tsflags=nodocs --enablerepo=rhel-7-server-rpms --enablerepo=r
 PACKAGES="gem gcc-c++ libcurl-devel make bc gettext nss_wrapper hostname iproute"
 
 # ruby packages
-PACKAGES="${PACKAGES} rh-ruby24 rh-ruby24-rubygems rh-ruby24-ruby-devel"
+PACKAGES="${PACKAGES} rh-ruby22 rh-ruby22-rubygems rh-ruby22-ruby-devel"
 
 # if the release is a red hat version then we need to set additional arguments for yum repositories
 #RED_HAT_MATCH='^Red Hat.*$'
@@ -59,7 +59,7 @@ gem install -N --conservative --minimal-deps --no-document \
   'public_suffix:<3.0.0' \
   'fluent-plugin-record-modifier:<1.0.0' \
   'fluent-plugin-rewrite-tag-filter:<2.0.0' \
-  fluent-plugin-kubernetes_metadata_filter \
+  'fluent-plugin-kubernetes_metadata_filter:<2.0.0' \
   fluent-plugin-rewrite-tag-filter \
   fluent-plugin-secure-forward \
   'fluent-plugin-remote_syslog:<1.0.0' \
