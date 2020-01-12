@@ -33,9 +33,13 @@ if [[ $RELEASE =~ $CENTOS_MATCH && -z "$USE_SYSTEM_REPOS" ]]; then
 fi
 
 # ensure latest versions
+
+echo "yum update $YUM_ARGS -y"
+
 yum update $YUM_ARGS -y
 
 # install all required packages
+echo "yum install -y $YUM_ARGS $PACKAGES"
 yum install -y $YUM_ARGS $PACKAGES
 
 # clean up yum to make sure image isn't larger because of installations/updates
